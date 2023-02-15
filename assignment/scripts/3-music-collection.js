@@ -28,13 +28,15 @@ console.log(collection);    //log collection array
 
 console.log('***showCollection***');
 
-function showCollection(){
-    //x = collection.x
-    for (info of collection){
-        console.log(collection.title +" by "+ collection.artist + 
-                    " published in " + collection.yearPublished );
-    }
+function showCollection(collectionArray){
+    
+    console.log('The length of collection is:', collectionArray.length);    //show array length
+    for (info of collectionArray){  
+        console.log(info.title +" by "+ info.artist + 
+                    " published in " + info.yearPublished );    //Loop through array properties
+    }   //end array for of loop
+
     
 }
-
-console.log(showCollection);
+console.log('testing showCollection')
+showCollection(collection);

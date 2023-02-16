@@ -28,15 +28,28 @@ console.log(collection);    //log collection array
 
 console.log('***showCollection***');
 
-function showCollection(collectionArray){
+function showCollection(Array){
     
-    console.log('The length of collection is:', collectionArray.length);    //show array length
-    for (info of collectionArray){  
+    console.log('The length of collection is:', Array.length);    //show array length
+    for (info of Array){  
         console.log(info.title +" by "+ info.artist + 
                     " published in " + info.yearPublished );    //Loop through array properties
-    }   //end array for of loop
+    }   //end array 'for of' loop
 
     
 }
 console.log('testing showCollection')
 showCollection(collection);
+
+function findByArtist (artist){     //funct. def. + parameters
+    const array = [];               //create array to hold results
+    for(singer of collection){      //for of loop to loop through collection
+        if (singer === artist){     
+            array.push(singer)
+        } return array;
+        
+    }
+
+}   //end findByArtist
+
+

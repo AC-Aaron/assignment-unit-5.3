@@ -41,15 +41,25 @@ function showCollection(Array){
 console.log('testing showCollection')
 showCollection(collection);
 
+console.log('***findByArtist***');
+
 function findByArtist (artist){     //funct. def. + parameters
-    const array = [];               //create array to hold results
-    for(singer of collection){      //for of loop to loop through collection
-        if (singer === artist){     
-            array.push(singer)
-        } return array;
+    const searchArray = [];               //create array to hold results
+    for(let i = 0; i < collection.length; i++){      //for of loop to loop through collection
+        if (collection[i].artist == artist ){     
+            searchArray.push(collection[i])     //adding matching objects to searchArray
+            
+        } 
         
-    }
+    }return searchArray;
 
 }   //end findByArtist
 
 
+
+
+
+
+console.log('in findByArtist looking for:', findByArtist('Drake'));
+console.log('in findByArtist looking for:', findByArtist('Smashing Pumpkins'));
+console.log('in findByArtist looking for:', findByArtist('Nirvana'));
